@@ -1,0 +1,153 @@
+.weather-app {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff, #f0f4f8);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .input-group label {
+    color: #34495e;
+    font-weight: 500;
+    min-width: 90px;
+  }
+  
+  .coordinate-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .coordinate-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+  }
+  
+  .fetch-button {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+  }
+  
+  .fetch-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+  }
+  
+  .fetch-button:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: #ffebee;
+    border-radius: 5px;
+  }
+  
+  .weather-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .location {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .weather-details {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .weather-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .weather-item:last-child {
+    border-bottom: none;
+  }
+  
+  .label {
+    color: #7f8c8d;
+    font-weight: 500;
+  }
+  
+  .value {
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .weather-app {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+    
+    .input-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .fetch-button {
+      width: 100%;
+    }
+  }
